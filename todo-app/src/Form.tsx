@@ -23,18 +23,30 @@ export default class Form extends Component<
     const value = this.state.value;
     if (value === "") return;
 
-    const items = this.state.items;
+    let items = this.state.items;
     items.push(value);
 
     // Reset input value, add new item with current input value
     this.setState({ value: "", items: items });
   }
 
+  deleteItem(itemIndex: number) {
+    let items = this.state.items;
+    items.splice(itemIndex, 1);
+    this.setState({ items: items });
+  }
+
   render() {
     // Map items to li element
-    const items = this.state.items.map((value, i) => (
-      <Item key={String(i)} value={value} />
-    ));
+    const items = this.state.items.map((value, index) => {
+      return (
+        <Item
+          index={index}
+          value={value}
+          onDelete={() => this.deleteItem(index)}
+        />
+      );
+    });
 
     return (
       <div className="Form">
