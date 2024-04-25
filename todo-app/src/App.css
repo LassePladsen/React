@@ -61,8 +61,8 @@
 }
 
 .Item-button {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background-color: var(--color-light);
   border-radius: 10px;
   border-color:var(--color-background);
@@ -80,8 +80,8 @@
 }
 
 .Item-logo {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
 }
 
 
