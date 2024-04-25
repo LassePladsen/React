@@ -51,7 +51,7 @@ export default class Form extends Component<
     });
 
     // Logo size
-    const size = 20;
+    const size = 30;
     return (
       <div className="Form">
         <ul className="Form-items">{items}</ul>

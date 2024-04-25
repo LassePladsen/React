@@ -91,14 +91,18 @@
   gap: 9px;
 }
 
-.Form-submit,.Form-input {
+.Form-submit,
+.Form-input {
+  border-radius: 15px;
+}
+
+.Form-input {
   background-color: var(--color-light);
   color: white;
-  border-radius: 8px;
   border: 0 solid var(--color-background);
-  padding: 5px;
+  padding-left: 9px;
 }
 
 .Form-submit:hover {
-  border: 1px solid var(--color-contrast);
+  background-color: var(--color-light);
 }
