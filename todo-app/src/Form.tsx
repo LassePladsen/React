@@ -41,7 +41,7 @@ export default class Form extends Component<
     const items = this.state.items.map((value, index) => {
       return (
         <Item
-          index={index}
+          key={index}
           value={value}
           onDelete={() => this.deleteItem(index)}
         />

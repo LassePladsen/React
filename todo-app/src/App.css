@@ -1,9 +1,14 @@
+:root {
+  --color-background: #282c34;
+  --color-light: #3d424d;
+  --completed-thickness: 3px;
+}
+
 .App {
   text-align: center;
 }
-
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,6 +22,8 @@
 .Form-items {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  gap: 5px;
 }
 
 .Item {
@@ -24,4 +31,57 @@
   justify-content: space-between;
   gap: 10px;
   word-break: break-word;
+}
+
+.Item-text{
+  margin: 0;
+  padding: 4px;
+}
+
+.Item-text.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: var(--completed-thickness);
+  text-decoration-color: var(--color-light);
+}
+
+.Item-text:hover {
+  background-color: var(--color-light);
+  border-radius: 5px;
+}
+
+
+.Item-usage {
+  display: flex;
+  gap: 10px;
+}
+
+/* .Item-checkbox {
+  background-color: rgb(140, 236, 84);
+} */
+
+
+.Item-button {
+  /* background-color: var(--color-background); */
+  background-color: var(--color-light);
+  border-radius: 10px;
+  border-color:var(--color-background);
+  /* border: 0; */
+}
+
+.Item-button:hover {
+  border: solid;
+  /* border-color: red; */
+  border-width: 1px;
+}
+
+.Item-checkbox {
+  margin: 0;
+  /* border-width: 10px; */
+  flex-shrink: 0;
+  flex-basis: 23px;
+}
+
+.Item-logo {
+  height: 20px;
+  width: 20px;
 }
