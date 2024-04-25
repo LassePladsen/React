@@ -41,7 +41,7 @@
 
 .Item-text{
   margin: 0;
-  padding: 5px 15px 0 15px;
+  padding: 0px 15px 0 15px;
 }
 
 .Item-text.completed {
