@@ -1,5 +1,7 @@
 import { Component } from "react";
 import Item from "./Item";
+import iconAdd from "./images/add(1).png";
+
 export default class Form extends Component<
   {},
   { value: string; items: string[] }
@@ -48,17 +50,33 @@ export default class Form extends Component<
       );
     });
 
+    // Logo size
+    const size = 20;
     return (
       <div className="Form">
         <ul className="Form-items">{items}</ul>
         <form className="Form-form" onSubmit={this.handleSubmit}>
-          <input
-            className="Form-input"
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-          ></input>
-          <input type="submit" className="Form-button" value="Add item"></input>
+          <div className="Form-content">
+            <input
+              className="Form-input"
+              type="text"
+              value={this.state.value}
+              onChange={this.handleChange}
+            ></input>
+            {/* <input
+              type="submit"
+              className="Form-button"
+              value="Add item"
+            ></input> */}
+            <input
+              type="image"
+              src={iconAdd}
+              className="Form-submit"
+              alt="icon-add"
+              width={size}
+              height={size}
+            />
+          </div>
         </form>
       </div>
     );

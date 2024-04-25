@@ -1,12 +1,14 @@
 :root {
   --color-background: #282c34;
   --color-light: #3d424d;
+  --color-contrast: #bab89c;
   --completed-thickness: 3px;
 }
 
 .App {
   text-align: center;
 }
+
 .App-header {
   background-color: var(--color-background);
   min-height: 100vh;
@@ -16,6 +18,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-title {
+  margin: 5;
 }
 
 
@@ -35,7 +41,7 @@
 
 .Item-text{
   margin: 0;
-  padding: 4px;
+  padding: 5px 15px 0 15px;
 }
 
 .Item-text.completed {
@@ -49,34 +55,26 @@
   border-radius: 5px;
 }
 
-
 .Item-usage {
   display: flex;
   gap: 10px;
 }
 
-/* .Item-checkbox {
-  background-color: rgb(140, 236, 84);
-} */
-
-
 .Item-button {
-  /* background-color: var(--color-background); */
+  height: 40px;
+  width: 40px;
   background-color: var(--color-light);
   border-radius: 10px;
   border-color:var(--color-background);
-  /* border: 0; */
 }
 
 .Item-button:hover {
   border: solid;
-  /* border-color: red; */
   border-width: 1px;
 }
 
 .Item-checkbox {
   margin: 0;
-  /* border-width: 10px; */
   flex-shrink: 0;
   flex-basis: 23px;
 }
@@ -84,4 +82,23 @@
 .Item-logo {
   height: 20px;
   width: 20px;
+}
+
+
+.Form-content {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.Form-submit,.Form-input {
+  background-color: var(--color-light);
+  color: white;
+  border-radius: 8px;
+  border: 0 solid var(--color-background);
+  padding: 5px;
+}
+
+.Form-submit:hover {
+  border: 1px solid var(--color-contrast);
 }

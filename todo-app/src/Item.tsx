@@ -1,5 +1,5 @@
 import { Component } from "react";
-import deleteLogo from "./delete(1).png";
+import iconDelete from "./images/delete(1).png";
 
 type ItemProps = {
   key: number;
@@ -39,7 +39,7 @@ export default class Item extends Component<ItemProps, ItemState> {
         <div className="Item-usage">
           {/* <input className="Item-checkbox" type="checkbox" /> */}
           <button className="Item-button" onClick={this.state.onDelete}>
-            <img className="Item-logo" src={deleteLogo} alt="delete-icon" />
+            <img className="Item-logo" src={iconDelete} alt="icon-delete" />
           </button>
         </div>
       </li>
