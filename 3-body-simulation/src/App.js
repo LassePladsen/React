@@ -85,25 +85,23 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const numBodies = data[0].x.length;
-      const x = Array(numBodies);
-      const y = Array(numBodies);
-      const vx = Array(numBodies);
-      const vy = Array(numBodies);
+      const x = Array(NUM_BODIES);
+      const y = Array(NUM_BODIES);
+      const vx = Array(NUM_BODIES);
+      const vy = Array(NUM_BODIES);
       let r1;
       let r2;
       let diff;
 
       // Update positions from gravitational force
-      for (let i = 0; i < numBodies - 1; i++) {
-        for (let j = i + 1; j < numBodies; j++) {
+      for (let i = 0; i < NUM_BODIES - 1; i++) {
+        for (let j = i + 1; j < NUM_BODIES; j++) {
           r1 = getCoordinates(position, i); // body i
           r2 = getCoordinates(position, j); // body j
           diff = subtract(r1, r2);
 
           // Gravity between these two
           vx[i] -= newtonGravity(diff) * SECONDS;
-
         }
       }
       console.log("loops done");
